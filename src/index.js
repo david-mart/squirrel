@@ -1,5 +1,5 @@
 /* eslint-disable import/default */
-
+import '../node_modules/grommet/scss/vanilla/index.scss';
 import React from 'react';
 import { render } from 'react-dom';
 import { browserHistory } from 'react-router';

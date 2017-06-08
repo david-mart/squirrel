@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getPhotos } from "../../actions/photo-actions";
+import List from "grommet/components/List";
+import ListItem from "grommet/components/ListItem";
+import Box from "grommet/components/Box";
 
 class PhotosList extends Component {
   componentDidMount() {
@@ -10,18 +13,19 @@ class PhotosList extends Component {
   render() {
     const { photos } = this.props;
     return (
-      <div>
-        <ul>
-          {photos.map(photo => <li key={photo.name}>{photo.name}</li>)}
-        </ul>
-      </div>
+      <Box margin="small" colorIndex="light-2">
+        <List>
+          {photos.map(photo => (
+            <ListItem key={photo.name}>{photo.name}</ListItem>
+          ))}
+        </List>
+      </Box>
     );
   }
 }
 
 const mapStateToProps = state => {
   const { photos } = state;
-  console.log(state);
   return { photos };
 };
 
