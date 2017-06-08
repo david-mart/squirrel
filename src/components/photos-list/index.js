@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getPhotos } from "../../actions/photo-actions";
+import { getPhotos, watchPhotosAddedEvent } from "../../actions/photo-actions";
 import List from "grommet/components/List";
 import ListItem from "grommet/components/ListItem";
 import Box from "grommet/components/Box";
 
 class PhotosList extends Component {
   componentDidMount() {
+    this.props.watchPhotosAddedEvent();
     this.props.getPhotos();
   }
 
@@ -29,4 +30,6 @@ const mapStateToProps = state => {
   return { photos };
 };
 
-export default connect(mapStateToProps, { getPhotos })(PhotosList);
+export default connect(mapStateToProps, { getPhotos, watchPhotosAddedEvent })(
+  PhotosList
+);
