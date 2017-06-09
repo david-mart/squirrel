@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getPhotos, watchPhotosAddedEvent } from "../../actions/photo-actions";
+import { getPhotos, watchPhotosAddedEvent } from "../../../actions/photo-actions";
 import List from "grommet/components/List";
 import ListItem from "grommet/components/ListItem";
 import Box from "grommet/components/Box";

@@ -9,9 +9,9 @@ class App extends React.Component {
   render() {
     return (
       <GrommetApp>
-        <IndexLink to="/">Home</IndexLink>
+        <IndexLink to="/">Chat</IndexLink>
         {' | '}
-        <Link to="/fuel-savings">Demo App</Link>
+        <Link to="/photos">Photos</Link>
         {' | '}
         <Link to="/about">About</Link>
         <br/>

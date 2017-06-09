@@ -47,8 +47,8 @@ const getPhotosAddedAction = photo => {
 };
 
 export const watchPhotosAddedEvent = () => dispatch => {
-  console.log('added');
   database.ref("/photos").on("child_added", snap => {
     dispatch(getPhotosAddedAction(snap.val()));
   });
 };
+

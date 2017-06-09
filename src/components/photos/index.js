@@ -1,9 +1,9 @@
 import React from "react";
-import PhotosList from "../components/photos-list";
+import PhotosList from "./photos-list";
 import Title from "grommet/components/Title";
 import AddPhotos from "./add-photos";
 
-const HomePage = () => {
+const Photos = () => {
   return (
     <div>
       <Title>Photos</Title>
@@ -13,4 +13,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Photos;
