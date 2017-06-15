@@ -4,7 +4,7 @@ import {
   GET_PHOTOS_FULLFILLED,
   PHOTO_ADDED
 } from "../constants/actionTypes";
-import database from "../store/database";
+import database, { storage } from "../store/database";
 
 export const getPhotos = () => dispatch => {
   dispatch(getPhotosRequestedAction());
@@ -52,3 +52,11 @@ export const watchPhotosAddedEvent = () => dispatch => {
   });
 };
 
+export const uploadPhoto = photo => dispatch => {
+  console.log(photo.file);
+  // const photoRef = storage.ref().child(`photos/test.jpg`);
+  // photoRef.put(photo.file).then(snap => {
+  //   console.log('uploaded');
+  //   console.log(snap);
+  // })
+}
